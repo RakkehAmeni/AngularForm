@@ -1,0 +1,81 @@
+footer {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 60px 55px;
+    margin: 0px;
+    bottom: 0;
+    color: #fff;
+    height: 53.2vh;
+}
+
+.footer-navigation h4 {
+    margin: 0;
+    font: normal 30px Cookie, cursive;
+    margin-bottom: 20px;
+    color: #fff
+}
+.footer-navigation h4 a {
+    text-decoration: none;
+    color: #fff
+}
+
+.footer-navigation p.links a {
+    color: #fff;
+    text-decoration: none
+}
+
+@media (max-width:767px) {
+    .footer-contacts {
+        margin: 30px 0
+    }
+}
+
+.footer-contacts p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle
+}
+
+.footer-contacts p a {
+    color: #5383d3;
+    text-decoration: none
+}
+
+span.new-line-span {
+    display: block;
+    font-weight: normal;
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2
+}
+.footer-information h4 {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px
+}
+.footer-information p {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0
+}
+.social-links a {
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    
+}
+@media screen and (max-width: 600px)
+{ footer{
+    height: 120vh;
+}
+    
+}

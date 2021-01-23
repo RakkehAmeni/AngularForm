@@ -1,0 +1,6 @@
+@media screen and (max-width: 600px)
+{button {
+ margin-right: 20px;
+ line-height: 10px;
+}
+}

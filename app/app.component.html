@@ -1,0 +1,32 @@
+<header class="header">
+    <div class="top_bar">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex flex-row">
+                    <div class="logo">
+                            <p>Angular Form Application<p>
+                    </div>
+                    <div class="top_bar_content ml-auto">
+                        <div class="top_bar_user">
+                            
+                            <div><a routerLink="/registeruser">Add User </a></div>
+                            <div><a routerLink="/displayusers">Users List</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</header>
+
+<section class="col-md-4 ml-sm-auto col-lg-12 ">
+
+        <div class="inner-adjust">
+
+            <router-outlet></router-outlet>
+        </div>
+    </section>
+
+ <app-footer></app-footer>
+  
+

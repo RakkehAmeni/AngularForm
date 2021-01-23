@@ -1,0 +1,31 @@
+    <h1 class="h2" style="text-align: left; line-height:60px; margin-left: 40px;" >Users List</h1>
+  
+  <div class="pricing-header mx-auto">
+      <div class="no-data text-center" *ngIf="noData">
+      <p class="nodata-msg">No user added yet!</p>
+      <a routerLink="/registeruser" class="btn btn-success" style="margin-bottom: 15px;"> Add User </a>
+    </div>
+      <div class="table-responsive" *ngIf="hideWhenNouser">
+      <table class="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
+        <thead>
+          <tr>
+            <th scope="col">User Id</th>
+            <th scope="col"> User name</th>
+            <th scope="col">Email</th>
+            <th class="text-center" scope="col">Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of User">
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.firstName}} {{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td class="text-center action-block">
+              <button type="button" class="btn btn-outline-success" style="margin-right:20px ;" routerLink="/edituser/{{user.id}}">Update</button>
+              <button type="button" class="btn btn-outline-danger" (click)="deleteuser(user)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

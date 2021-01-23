@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2"  style="text-align: left; line-height:60px; margin-left: 40px;" >Edit User Details</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+       <div class="btn-group">
+          <button class="btn btn-sm btn-outline-secondary" (click)="goBack()">Go Back</button>
+       </div>
+    </div>
+ </div>
+ <div class="registration-form"style="margin-top :-40px;">
+ <form [formGroup]="editForm" (ngSubmit)="updateForm()" novalidate>
+   <div class="form-group">
+      <input type="text" class="form-control item" id="firstName" placeholder="*First name" required  formControlName="firstName" >
+      <p *ngIf="firstName.touched && firstName.invalid"> Please enter first name</p>
+      <p *ngIf="firstName.errors?.minlength" class="error">*First name shouldn't be less than 2 words</p>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control item" id="lastName" placeholder="*Last name" required  formControlName="lastName" >
+    <p *ngIf="lastName.touched && lastName.invalid"> Please enter the last name</p>
+    <p *ngIf="lastName.errors?.minlength" class="error">*Last name shouldn't be less than 2 words</p>
+  </div>
+  <div class="form-group">
+      <input type="text" class="form-control item" id="email" placeholder="example@example.com" formControlName="email" required>
+       <p *ngIf="email.touched && email.invalid" class="error">*Please provide email</p>
+      <p *ngIf="email.errors?.pattern" class="error">*Please enter correct email</p>
+  </div>
+  <div class="form-group text-right">
+   <button type="button" class="btn btn-secondary gap-right" style="margin-right:40px ;" (click)="ResetForm()">Reset</button>
+   <button type="submit"  class="btn btn-success"[disabled]="!editForm.valid">Update User</button>
+  </div>
+</form>
+ </div>
